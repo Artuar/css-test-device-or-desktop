@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS test device or desktop</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .features > * {
+            width: 200px;
+            height: 50px;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (pointer: coarse) {
+            .pointer-coarse {
+                background-color: teal;
+            }
+        }
+
+        @media (pointer: fine) {
+            .pointer-fine {
+                background-color: salmon;
+            }
+        }
+
+        @media (pointer: none) {
+            .pointer-none {
+                background-color: white;
+            }
+        }
+
+        @media (hover: hover) {
+            .hover-hover {
+                background-color: green;
+            }
+        }
+
+        @media (hover: none) {
+            .hover-none {
+                background-color: red;
+            }
+        }
+
+        @media (any-hover: hover) {
+            .any-hover-hover {
+                background-color: yellow;
+            }
+        }
+
+        @media (any-hover: on-demand) {
+            .any-hover-on-demand {
+                background-color: blue;
+            }
+        }
+
+        @media (any-hover: none) {
+            .any-hover-none {
+                background-color: pink;
+            }
+        }
+
+        @media (any-pointer: coarse) {
+            .any-pointer-coarse {
+                background-color: orange;
+            }
+        }
+
+        @media (any-pointer: fine) {
+            .any-pointer-fine {
+                background-color: grey;
+            }
+        }
+
+        @media (any-pointer: none) {
+            .any-pointer-none {
+                background-color: fuchsia;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="features">
+    <div class="pointer-coarse">@media (pointer: coarse)</div>
+    <div class="pointer-fine">@media (pointer: fine)</div>
+    <div class="pointer-none">@media (pointer: none)</div>
+    <div class="hover-hover">@media (hover: hover)</div>
+    <div class="hover-none">@media (hover: none)</div>
+    <div class="any-hover-hover">@media (any-hover: hover)</div>
+    <div class="any-hover-on-demand">@media (any-hover: on-demand)</div>
+    <div class="any-hover-none">@media (any-hover: none)</div>
+    <div class="any-pointer-coarse">@media (any-pointer: coarse)</div>
+    <div class="any-pointer-fine">@media (any-pointer: fine)</div>
+    <div class="any-pointer-none">@media (any-pointer: none)</div>
+</div>
+</body>
+</html>
