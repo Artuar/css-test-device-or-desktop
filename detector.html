@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS test device or mobile</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .detector > * {
+            display: none;
+        }
+
+        @media (pointer: coarse)  {
+            .device {
+                display: block;
+            }
+        }
+
+        @media (pointer: fine), (pointer: none) {
+            .desktop {
+                display: block;
+            }
+        }
+
+        @media (pointer: fine) and (any-pointer: coarse) {
+            .touched-desktop {
+                display: block;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="detector">
+    <div class="desktop">Page opened from DESKTOP</div>
+    <div class="device">Page opened from DEVICE</div>
+    <div class="touched-desktop">Your desktop is TOUCHED</div>
+</div>
+</body>
+</html>
